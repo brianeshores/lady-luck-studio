@@ -97,12 +97,17 @@ function getProduct(id) {
 function getCollection(id) {
   const collectionId = id;
   return (dispatch) => {
-    client.collection.fetchWithProducts(collectionId).then((resp) => {
-      dispatch({
-        type: COLLECTION_FOUND,
-        payload: resp.products,
+    client.collection
+      .fetchWithProducts(collectionId)
+      .then((resp) => {
+        dispatch({
+          type: COLLECTION_FOUND,
+          payload: resp.products,
+        });
+      })
+      .catch((e) => {
+        console.log(e);
       });
-    });
   };
 }
 

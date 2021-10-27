@@ -26,6 +26,21 @@ img {
 	object-fit: cover;
 }
 
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 300px;
+
+}
+
+a {
+	font-family: 'Zen Antique Soft', serif;
+	font-size: 1.2em;
+	padding: 10px;
+	text-decoration: none;
+	color: rgb(73, 72, 72)
+}
+
 h1 {
 	font-weight: 300;
 	margin: 0 0 15px;
@@ -48,7 +63,8 @@ h2 {
 	background-image: url("https://cdn.shopify.com/s/files/1/0376/6583/3097/files/logo2_360x.png?v=1615418221");
 	background-size: contain;
 	background-repeat: no-repeat;
-	border: 10px solid white;
+	border: 50px solid white;
+	background-position: center;
 }
 
 .App__nav {
@@ -72,6 +88,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-column-gap: 2rem;
   grid-row-gap: 3rem;
+	margin-top: 30px;
 }
 
 .App__view-cart-wrapper {
