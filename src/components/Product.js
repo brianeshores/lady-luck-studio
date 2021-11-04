@@ -1,5 +1,8 @@
 import React from "react";
 import { useShopify } from "../hooks";
+import { motion } from "framer-motion";
+import { fadeIn } from "../animations";
+import styled from "styled-components";
 
 export default (props) => {
   const { products, fetchProduct } = useShopify();
@@ -13,7 +16,12 @@ export default (props) => {
   }
 
   return (
-    <div className="Product-wrapper">
+    <ProductList
+      variants={fadeIn}
+      initial="hidden"
+      animate="show"
+      className="Product-wrapper"
+    >
       {products &&
         products.map((product, i) => {
           const image = product.images[0];
@@ -39,6 +47,11 @@ export default (props) => {
             </div>
           );
         })}
-    </div>
+    </ProductList>
   );
 };
+
+const ProductList = styled(motion.div)`
+  margin: 2em;
+  text-align: center;
+`;

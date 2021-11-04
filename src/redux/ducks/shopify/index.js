@@ -71,6 +71,7 @@ export default (state = initialState, action) => {
 function getProducts() {
   return (dispatch) => {
     client.product.fetchAll().then((resp) => {
+      // console.log(resp);
       dispatch({
         type: PRODUCTS_FOUND,
         payload: resp,

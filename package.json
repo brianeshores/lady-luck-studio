@@ -5,7 +5,7 @@
 	"private": false,
 	"main": "index.js",
 	"dependencies": {
-		"framer-motion": "^5.0.0",
+		"framer-motion": "^2.9.4",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-icons": "^3.10.0",

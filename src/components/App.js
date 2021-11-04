@@ -5,16 +5,12 @@ import Cart from "./Cart";
 import Home from "./Home";
 import ProductView from "./ProductView";
 import { useShopify } from "../hooks";
-import Nav from "./Nav.js";
+import Nav from "./Nav";
+import Branding from "./Branding";
 
 export default (props) => {
-  const {
-    createShop,
-    createCheckout,
-    fetchProducts,
-    fetchCollection,
-    shopDetails,
-  } = useShopify();
+  const { createShop, createCheckout, fetchProducts, fetchCollection } =
+    useShopify();
 
   useEffect(() => {
     createShop();
@@ -34,6 +30,7 @@ export default (props) => {
         <Route path="/Home" component={Home} />
         <Route path="/Products" component={Products} />
         <Route path="/Product/:productId" component={ProductView} />
+        <Route path="/Branding" component={Branding} />
         <Route path="/" component={Cart} />
       </div>
     </Router>

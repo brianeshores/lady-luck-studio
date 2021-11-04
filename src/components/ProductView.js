@@ -36,9 +36,9 @@ export default (props) => {
 
   return (
     <div id="individualProduct">
-      <Link className="homeButton button" to={"/Home"}>
+      {/* <Link className="homeButton button" to={"/Home"}>
         Home
-      </Link>
+      </Link> */}
       <div className="Product-wrapper2">
         <div className="Images">
           {product.images &&
